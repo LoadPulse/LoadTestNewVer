@@ -1,9 +1,84 @@
-<script setup lang="ts">
-</script>
+<!-- <script setup lang="ts">
+</script> -->
 
 <template>
-
+    <div class="navbar__container flex items-center place-content-between px-8">
+        <div class="navbar__container__item flex items-center gap-8">
+            <img class="w-7" src="/assets/icons/list.svg" alt="">
+            <div class="logo">
+                <span>LD</span> LOADTEST
+            </div>
+        </div>
+        <div class="navbar__container__item flex items-center gap-4">
+            <a href="#" class="link">
+                <img class="w-4" src="/assets/icons/notify.svg" alt="">
+            </a>
+            <a href="#" class="link">
+                <img class="w-5" src="/assets/icons/question.svg" alt="">
+            </a>
+            <a href="#" class="link">
+                <img class="w-4" src="/assets/icons/user.svg" alt="">
+            </a>
+            <div class="btn flex items-center gap-4">
+                <button class="px-5 btn__fill">Sign In</button>
+                <button class="px-5 btn__nofill">Register</button>
+            </div>
+        </div>
+    </div>
 </template>
 
-<style>
+<style scoped lang='scss'>
+    .navbar__container {
+        height: 48px;
+        background-color: #f5f3f3;
+
+        &__item {
+            .logo {
+                font-size: 22px;
+                font-weight: 600;
+                color: #918f8f;
+                cursor: pointer;
+                span {
+                    color: #6656fc;
+                    font-weight: 700;
+                    font-size: 28px;
+                }
+            }
+
+            .link {
+                width: 28px;
+                height: 28px;
+                border-radius: 60px;
+                background-color: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 0 0 1px rgb(35 38 59 / 5%), 0 1px 3px 0 rgb(35 38 59 / 15%);
+            }
+
+            .link:hover {
+                color: #fff;
+                background-color: #515151;
+            }
+
+            .btn {
+                button {
+                    font-size: 14px;
+                    border-radius: 6px;
+                    height: 32px;
+                    font-weight: 600;
+                }
+                &__fill {
+                    background-color: #6656fc;
+                    color: #fff;
+                }
+
+                &__nofill {
+                    background-color: #fff;
+                    color: #6656fc;
+                    border: 1px solid #6656fc;
+                }
+            }
+        }
+    }
 </style>

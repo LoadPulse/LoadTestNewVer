@@ -2,7 +2,7 @@
     <div>
       <LayoutsNavBar/>
       <slot />
-      <LayoutsFooter />
+      <!-- <LayoutsFooter /> -->
     </div>
   </template>
   
