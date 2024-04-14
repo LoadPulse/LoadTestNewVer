@@ -10,12 +10,10 @@ useSeoMeta({
   ogDescription: 'An impressive service website of Trung Dong',
 //   ogImage: '/public/images/thumbnail.png',
 })
-definePageMeta({ layout: 'page' })
+definePageMeta({ layout: 'default' })
 </script>
 <template>
-    <div>
-        
-    </div>
+    
 </template>
 
 
