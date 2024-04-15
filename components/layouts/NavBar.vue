@@ -1,5 +1,5 @@
-<!-- <script setup lang="ts">
-</script> -->
+<script setup lang="ts">
+</script>
 
 <template>
     <div class="navbar__container flex items-center place-content-between px-8">
