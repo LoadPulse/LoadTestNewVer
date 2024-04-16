@@ -15,19 +15,28 @@
                 <img src="/assets/images/github.png" alt="" class="w-8">
                 <span class="text-base font-semibold">Continue with Github</span>
             </div>
-            <div class="login__container__other my-6 text-center">
-                <p>Or, sign in with email</p>
+            <div class="login__container__other my-6 text-center flex items-center justify-around" >
+                <span ></span>
+                <p class="text-sm">Or, sign in with email</p>
+                <span></span>
             </div>
             <form class="login__container__form">
                 <div class="inp">
-                    <p>Email</p>
-                    <input placeholder="Your email address" type="text">
+                    <p class="mb-1">Email</p>
+                    <input class="h-11 w-full outline-none p-2 px-4 border-solid border-gray-600 rounded-md" placeholder="Your email address" type="text">
                 </div>
                 <div class="inp">
-                    <p>Password</p>
-                    <input placeholder="Your password" type="text">
+                    <p class="mt-3 mb-1">Password</p>
+                    <input class="h-11 w-full outline-none p-2 px-4 rounded-md" placeholder="Your password" type="text">
                 </div>
-                <router-link :to="`/`" class="login__container__forgot">Forgot your password?</router-link>
+                <router-link :to="`/`" class="mt-3 text-sm float-right text-primary-color">Forgot your password?</router-link>
+
+                <button class="login__container__submit mt-10 w-full p-3 text-center font-semibold rounded-md text-base">Sign In</button>
+
+                <div class="login__container__create flex gap-3 mt-6">
+                    <span class="text-base">Don't have a LoadTesting account?</span>
+                    <router-link :to="`/auth/register`"class="sign__up font-semibold cursor-pointer">Sign Up</router-link :to="`/auth/register`">
+                </div>
             </form>
         </div>
     </div>
@@ -38,14 +47,13 @@
 .login {
     display: flex;
     align-items: center;
-    justify-items: center;
-    width: 100%;
+    justify-content: center;
+    margin-top: 68px;
     &__container {
-        box-shadow: 0 1px 6px 1px transparent, 0 1px 2px 0 transparent;
-        padding: 48px;
-        background-color: #fff;
+        box-shadow: 0 15px 35px 0 rgb(60 66 87 / 8%), 0 5px 15px 0 rgb(0 0 0 / 12%);
+        padding: 48px 48px 40px 48px;
         border-radius: 12px;
-        width: 400px;
+        width: 460px;
 
         &__btn {
             border-radius: 20px;
@@ -55,7 +63,30 @@
         }
 
         &__other {
-            
+            span {
+                height: 1px;
+                background-color: #ddd;
+                width: 80px;
+            }
+        }
+
+        &__form {
+            .inp {
+                input {
+                    border: 1px solid #ccc;
+                }
+            }
+        }
+
+        &__submit {
+            background-color: #6656fc;
+            color: #fff;
+        }
+
+        &__create {
+            .sign__up {
+                color: #6656fc;
+            }
         }
     }
 }

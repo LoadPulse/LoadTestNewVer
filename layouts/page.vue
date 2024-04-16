@@ -1,7 +1,7 @@
-<template>
+<!-- <template>
   <div>
     <LayoutsNavBar/>
     <slot />
     <LayoutsFooter />
   </div>
-</template>
+</template> -->
