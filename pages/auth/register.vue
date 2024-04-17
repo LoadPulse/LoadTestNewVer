@@ -41,6 +41,7 @@
                     <router-link :to="`/auth/login`"class="sign__up font-semibold cursor-pointer">Sign Up</router-link>
                 </div>
             </form>
+            
         </div>
     </div>
 </template>

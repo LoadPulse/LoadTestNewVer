@@ -4,7 +4,8 @@
 <template>
     <div class="navbar__container flex items-center place-content-between px-8">
         <div class="navbar__container__item flex items-center gap-8">
-            <img class="w-7" src="/assets/icons/list.svg" alt="">
+            <!-- <img class="w-7" src="/assets/icons/list.svg" alt=""> -->
+            <AtomIconSvg :name="'IcList'" :height="20" :width="20"  :fill="'red'" />
             <div class="logo">
                 <span>LD</span> LOADTEST
             </div>
