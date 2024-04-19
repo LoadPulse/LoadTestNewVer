@@ -19,7 +19,6 @@
         fill: 'currentColor',
         width: 18,
         height: 18  
-
     })
 
     const iconName = defineAsyncComponent(() =>

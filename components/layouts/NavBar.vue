@@ -5,24 +5,34 @@
     <div class="navbar__container flex items-center place-content-between px-8">
         <div class="navbar__container__item flex items-center gap-8">
             <!-- <img class="w-7" src="/assets/icons/list.svg" alt=""> -->
-            <AtomIconSvg :name="'IcList'" :height="20" :width="20"  :fill="'red'" />
-            <div class="logo">
-                <span>LD</span> LOADTEST
-            </div>
+            <AtomIconSvg :name="'IcList'" :height="30" :width="30"  fill="#4e4e4e" />
+            
+            <RouterLink to="/">
+                <div class="logo">
+                    <span>LD</span> LOADTEST
+                </div>
+            </RouterLink>
         </div>
         <div class="navbar__container__item flex items-center gap-4">
             <a href="#" class="link">
-                <img class="w-4" src="/assets/icons/notify.svg" alt="">
+                <!-- <img class="w-4" src="/assets/icons/notify.svg" alt=""> -->
+                <AtomIconSvg class="svgIcon" :name="'IcNotify'" :height="20" :width="20" fill="#000" />
             </a>
             <a href="#" class="link">
-                <img class="w-5" src="/assets/icons/question.svg" alt="">
+                <!-- <img class="w-5" src="/assets/icons/question.svg" alt=""> -->
+                <AtomIconSvg class="svgIcon" :name="'IcQuestion'" :height="20" :width="20"  fill="#000" />
             </a>
             <a href="#" class="link">
-                <img class="w-4" src="/assets/icons/user.svg" alt="">
+                <!-- <img class="w-4" src="/assets/icons/user.svg" alt=""> -->
+                <AtomIconSvg class="svgIcon" :name="'IcUser'" :height="20" :width="20"  fill="#000" />
             </a>
             <div class="btn flex items-center gap-4">
-                <button class="px-5 btn__fill">Sign In</button>
-                <button class="px-5 btn__nofill">Register</button>
+                <RouterLink to="/auth/login">
+                    <button class="px-5 btn__fill">Sign In</button>
+                </RouterLink>
+                <RouterLink to="/auth/register">
+                    <button class="px-5 btn__nofill">Register</button>
+                </RouterLink>
             </div>
         </div>
     </div>
@@ -60,6 +70,10 @@
             .link:hover {
                 color: #fff;
                 background-color: #515151;
+            }
+
+            .link:hover .svgIcon {
+                fill: #fff;
             }
 
             .btn {
