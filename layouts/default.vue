@@ -1,8 +1,7 @@
 <template>
-    <div>
-      <LayoutsNavBar/>
-      <slot />
-      <LayoutsFooter />
-    </div>
-  </template>
-  
+  <div>
+    <LayoutsNavBar/>
+    <slot />
+    <LayoutsFooter />
+  </div>
+</template>
