@@ -1,7 +1,17 @@
-<!-- <template>
+
+<template>
   <div>
     <LayoutsNavBar/>
-    <slot />
+    <LayoutsLeftNavbar/>
+    <slot class="slot"/>
     <LayoutsFooter />
   </div>
-</template> -->
+</template>
+
+<style lang="scss" scoped>
+.slot {
+margin-top: 100px;
+margin-left: 100px;
+height: 100vh;
+}
+</style>
