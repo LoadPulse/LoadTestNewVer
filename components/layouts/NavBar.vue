@@ -42,7 +42,9 @@
     .navbar__container {
         height: 48px;
         background-color: #f5f3f3;
-
+        position: fixed;
+        top: 0;
+        width: 100%;
         &__item {
             .logo {
                 font-size: 22px;

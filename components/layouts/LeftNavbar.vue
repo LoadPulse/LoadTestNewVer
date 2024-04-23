@@ -30,6 +30,7 @@
     position: fixed;
     left: 0;
     background-color: #f5f3f3;
+    top: 48px;
 
     &__item:hover {
         background-color: #e0dfdf;
