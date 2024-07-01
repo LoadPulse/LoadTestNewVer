@@ -38,7 +38,7 @@
 
                 <div class="login__container__create flex gap-3 mt-6">
                     <span class="text-base">If you have a LoadTesting account</span>
-                    <router-link :to="`/auth/login`"class="sign__up font-semibold cursor-pointer">Sign Up</router-link>
+                    <router-link :to="`/auth/login`"class="sign__up font-semibold cursor-pointer">Sign In</router-link>
                 </div>
             </form>
             
@@ -52,7 +52,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 68px;
+    min-height: 100vh;
+    margin-top: 88px;
     &__container {
         box-shadow: 0 15px 35px 0 rgb(60 66 87 / 8%), 0 5px 15px 0 rgb(0 0 0 / 12%);
         padding: 48px 48px 40px 48px;
@@ -83,13 +84,13 @@
         }
 
         &__submit {
-            background-color: #6656fc;
+            background-color: $Primary-500;
             color: #fff;
         }
 
         &__create {
             .sign__up {
-                color: #6656fc;
+                color: $Primary-500;
             }
         }
     }

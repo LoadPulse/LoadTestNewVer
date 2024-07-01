@@ -1,0 +1,11 @@
+@mixin text-style($fontSize, $lineHeight, $fontWeight, $textColor) {
+    font-size: $fontSize;
+    line-height: $lineHeight;
+    font-weight: $fontWeight;
+    font-style: normal;
+    color: $textColor;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
