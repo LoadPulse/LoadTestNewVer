@@ -4,34 +4,35 @@
 <template>
     <div class="navbar__container flex items-center place-content-between px-8">
         <div class="navbar__container__item flex items-center gap-8">
-            <!-- <img class="w-7" src="/assets/icons/list.svg" alt=""> -->
             <AtomIconSvg :name="'IcList'" :height="30" :width="30"  fill="#4e4e4e" />
-            
             <RouterLink to="/">
                 <div class="logo">
-                    <span>LD</span> LOADTEST
+                    <span>LP</span> LOADPULSE
                 </div>
             </RouterLink>
         </div>
         <div class="navbar__container__item flex items-center gap-4">
             <a href="#" class="link">
-                <!-- <img class="w-4" src="/assets/icons/notify.svg" alt=""> -->
                 <AtomIconSvg class="svgIcon" :name="'IcNotify'" :height="20" :width="20" fill="#000" />
             </a>
             <a href="#" class="link">
-                <!-- <img class="w-5" src="/assets/icons/question.svg" alt=""> -->
                 <AtomIconSvg class="svgIcon" :name="'IcQuestion'" :height="20" :width="20"  fill="#000" />
             </a>
             <a href="#" class="link">
-                <!-- <img class="w-4" src="/assets/icons/user.svg" alt=""> -->
                 <AtomIconSvg class="svgIcon" :name="'IcUser'" :height="20" :width="20"  fill="#000" />
             </a>
             <div class="btn flex items-center gap-4">
                 <RouterLink to="/auth/login">
-                    <button class="px-5 btn__fill">Sign In</button>
+                    <CommonUiKitBaseButton 
+                        :type="'FILL'"
+                        :title="'Login'"
+                    />
                 </RouterLink>
                 <RouterLink to="/auth/register">
-                    <button class="px-5 btn__nofill">Register</button>
+                    <CommonUiKitBaseButton 
+                        :type="'UNFILL'"
+                        :title="'Register'"
+                    />
                 </RouterLink>
             </div>
         </div>
@@ -40,8 +41,9 @@
 
 <style scoped lang='scss'>
     .navbar__container {
-        height: 48px;
-        background-color: #f5f3f3;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        height: 78px;
+        background-color: #ffff;
         position: fixed;
         top: 0;
         width: 100%;
@@ -52,7 +54,7 @@
                 color: #918f8f;
                 cursor: pointer;
                 span {
-                    color: #6656fc;
+                    color: $Primary-500;
                     font-weight: 700;
                     font-size: 28px;
                 }
@@ -76,25 +78,6 @@
 
             .link:hover .svgIcon {
                 fill: #fff;
-            }
-
-            .btn {
-                button {
-                    font-size: 14px;
-                    border-radius: 6px;
-                    height: 32px;
-                    font-weight: 600;
-                }
-                &__fill {
-                    background-color: #6656fc;
-                    color: #fff;
-                }
-
-                &__nofill {
-                    background-color: #fff;
-                    color: #6656fc;
-                    border: 1px solid #6656fc;
-                }
             }
         }
     }

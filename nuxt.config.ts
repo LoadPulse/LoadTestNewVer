@@ -6,11 +6,18 @@ export default defineNuxtConfig({
       viewport: 'width=device-width, initial-scale=1',
     }
   },
-  // devtools: { enabled: true },
-  modules: ["@nuxtjs/tailwindcss"], 
+  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/google-fonts"], 
+  vite: {
+    css: {
+        preprocessorOptions: {
+            scss: {
+                additionalData: '@import "~/assets/scss/mixins.scss"; @import "~/assets/scss/variables.scss";',
+            },
+        },
+    },
+  },
   css: [
-    // SCSS file in the project
-    "~/assets/scss/main.scss", // you should add main.scss somewhere in your app
+    "~/assets/scss/main.scss", 
   ],
   tailwindcss: {
     cssPath: ['~/assets/scss/tailwind.css', { injectPosition: "first" }],
@@ -20,5 +27,10 @@ export default defineNuxtConfig({
     },
     config: {},
     viewer: true,
+  },
+  googleFonts: {
+    families: {
+      Roboto: [100, 300, 400, 500, 700, 900]
+    }
   }
 })
